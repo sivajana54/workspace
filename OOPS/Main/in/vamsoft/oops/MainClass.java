@@ -1,0 +1,10 @@
+package in.vamsoft.oops;
+
+public class MainClass {
+	public static void main(String[] args) {
+		SportCar car=new SportCar();
+		System.out.println(car);
+		
+	}
+
+}

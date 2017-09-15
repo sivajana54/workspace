@@ -1,0 +1,21 @@
+package in.vamsoft.oops;
+
+public  class SportCar extends Car {
+
+	public Car() {
+		System.out.println("SportCar.Car()");
+	}
+	
+	@Override
+	public void stop() {
+		System.out.println("");
+		
+	}
+
+	@Override
+	public void brak() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
