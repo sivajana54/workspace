@@ -4,7 +4,8 @@ public class MainClass {
 	public static void main(String[] args) {
 		SportCar car=new SportCar();
 		System.out.println(car);
-		
+		Car vehicle=new Car();
+		System.out.println(vehicle);
 		
 	}
 
