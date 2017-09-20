@@ -1,21 +1,18 @@
 package in.vamsoft.training.oops;
 
+public abstract class Car extends Vehicle {
 
+  public Car() {
+    System.out.println("Car.Car()");
+  }
 
-public abstract class Car extends Vehicle{
+  @Override
+  public void start() {
+    System.out.println("Car.start()");
+  }
 
-		public Car() {
-		System.out.println("Car.Car()");
-	}
+  public void handBrake() {
+    System.out.println("Car.handBrake()");
+  }
 
-	@Override
-	public void start() {
-		
-		System.out.println("Car.start()");
-	}
-   public  void handBrake() {
-	   System.out.println("Car.handBrake()");
-	
-}
-	
 }
