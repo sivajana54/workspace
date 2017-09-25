@@ -16,13 +16,11 @@
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
         <copy includeemptydirs="false" todir="bin">
-            <fileset dir="Main">
-                <exclude name="**/*.launch"/>
+            <fileset dir="test">
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -37,7 +35,7 @@
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
-            <src path="Main"/>
+            <src path="test"/>
             <classpath refid="OOPS.classpath"/>
         </javac>
     </target>
@@ -55,13 +53,8 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="MainClass (1)">
-        <java classname="in.vamsoft.oops.MainClass" failonerror="true" fork="yes">
-            <classpath refid="OOPS.classpath"/>
-        </java>
-    </target>
-    <target name="MainClass">
-        <java classname="in.vamsoft.training.oops.MainClass" failonerror="true" fork="yes">
+    <target name="HierarchyTest">
+        <java classname="in.vamsoft.training.oops.HierarchyTest" failonerror="true" fork="yes">
             <classpath refid="OOPS.classpath"/>
         </java>
     </target>

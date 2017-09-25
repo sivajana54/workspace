@@ -1,10 +1,13 @@
 package in.vamsoft.training.oops;
 
 public interface Driving {
-  public void start();
 
-  public void stop();
+  void start();
 
-  public void brake();
+  /*
+   * { System.out.println("start"); }
+   */
+  void stop();
 
+  void brake();
 }

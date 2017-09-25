@@ -14,5 +14,4 @@ public abstract class Car extends Vehicle {
   public void handBrake() {
     System.out.println("Car.handBrake()");
   }
-
 }
