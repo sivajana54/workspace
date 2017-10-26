@@ -1,6 +1,7 @@
 package in.vamsoft.training.general;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -12,6 +13,11 @@ public class MathTest {
   @BeforeClass
   public static void initClass() {
     System.out.println("MathTest.initClass()");
+  }
+
+  @AfterClass
+  public static void finalClass() {
+    System.out.println("MathTest.finalClass");
   }
 
   @Before
@@ -56,5 +62,37 @@ public class MathTest {
     double result = math.sum(-100.98, -100.98);
     double expected = -201.96;
     Assert.assertEquals(expected, result, 0);
+  }
+  
+  @Test
+  public void testCase5() {
+    System.out.println("MathTest.testCase5()");
+    int actual = math.sum(10, 20);
+    int expected = 30;
+    Assert.assertEquals(expected, actual);
+  }
+
+  @Test
+  public void testCase6() {
+    System.out.println("MathTest.testCase5()");
+    int actual = math.sum(0, 0);
+    int expected = 0;
+    Assert.assertEquals(expected, actual);
+  }
+
+  @Test
+  public void testCase7() {
+    System.out.println("MathTest.testCase5()");
+    int actual = math.sum(-10, 20);
+    int expected = 10;
+    Assert.assertEquals(expected, actual);
+  }
+
+  @Test
+  public void testCase8() {
+    System.out.println("MathTest.testCase5()");
+    int actual = math.sum(-10, -20);
+    int expected = -30;
+    Assert.assertEquals(expected, actual);
   }
 }
